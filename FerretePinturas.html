@@ -5,8 +5,8 @@
 		<title>Programación AngularJS</title>
 
 		<!--Estilos-->
-		<link rel="stylesheet" type="text/css" href="../estilo.css">
-		<link rel="stylesheet" type="text/css" href="../animacion.css">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" type="text/css" href="animacion.css">
 		<!--final de Estilos-->
 
 
@@ -21,15 +21,16 @@
 		
 
 		</head>
-	<body>
+	<body ng-app="ferretePinturas" ng-controller="controlPinturas">
 		<div class="CajaUno animated bounceInDown">
 			
 		
 			<form id="FormIngreso">
 
-				<input type="text"  placeholder="Ingrese Temparatura" id="Temperatura">
+				<input type="text"  ng-model="datos.temperatura "placeholder="Ingrese Temperatura" id="Temperatura">
 	
 				<br>
+
 				
 			</form>
 			
@@ -38,6 +39,7 @@
 			
 			
 			<button  class="MiBotonUTN" onclick="FahrenheitCentigrados()" >A- de Fahrenheit a Centígrados </button>
+			{{datos.temperatura}}
 			<button  class="MiBotonUTN" onclick="CentigradosFahrenheit()" >B- de Centígrados a Fahrenheit</button>
 			
 
